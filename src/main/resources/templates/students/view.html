@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Détails de l'étudiant</title>
+    <style>
+        .container { max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+        .field { margin-bottom: 15px; }
+        .label { font-weight: bold; display: inline-block; width: 100px; }
+        .value { display: inline-block; }
+        .actions { margin-top: 20px; }
+        .actions a { margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Détails de l'étudiant</h1>
+        
+        <div class="field">
+            <span class="label">Nom :</span>
+            <span class="value" th:text="${student.name}">Jean Dupont</span>
+        </div>
+        
+        <div class="field">
+            <span class="label">Email :</span>
+            <span class="value" th:text="${student.email}">jean@email.com</span>
+        </div>
+        
+        <div class="field">
+            <span class="label">Cours :</span>
+            <span class="value" th:text="${student.course}">Mathématiques</span>
+        </div>
+        
+        <div class="actions">
+            <a href="/students/list">Retour à la liste</a>
+            <a th:href="@{/students/register}">Ajouter un étudiant</a>
+        </div>
+    </div>
+</body>
+</html>

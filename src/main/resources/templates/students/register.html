@@ -90,9 +90,9 @@
         </div>
 
         <div class="form-group">
-          <label for="major">Major:</label>
-          <select th:field="*{major}" id="major">
-            <option value="">Select a major</option>
+          <label for="course">Course:</label>
+          <select th:field="*{course}" id="course">
+            <option value="">Select a course</option>
             <option value="Computer Science">Computer Science</option>
             <option value="Information Technology">
               Information Technology
@@ -102,11 +102,11 @@
             <option value="Cybersecurity">Cybersecurity</option>
           </select>
           <div
-            th:if="${#fields.hasErrors('major')}"
+            th:if="${#fields.hasErrors('course')}"
             class="error"
-            th:errors="*{major}"
+            th:errors="*{course}"
           >
-            Major Error
+           course Error
           </div>
         </div>
 
